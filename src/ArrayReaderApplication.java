@@ -57,7 +57,7 @@ public class ArrayReaderApplication {
             JSONObject jsonobject = new JSONObject();
             ArrayList<Integer> MyArray = ReadArray();
             Collections.sort(MyArray);
-            jsonobject.put("max_value",MyArray.get(0));
+            jsonobject.put("min_value",MyArray.get(0));
             return jsonobject;
       }
 
@@ -81,7 +81,7 @@ public class ArrayReaderApplication {
                   median = MyArray.get((MyArray.size() / 2));
 
             } else {
-                  median = (((float) MyArray.get(Math.round((float) MyArray.size() / 2) - 2)) + (float) MyArray.get(Math.round((float) MyArray.size() / 2 - 1))) / 2;
+                  median = ((float) MyArray.get(Math.round(((float) MyArray.size()) / 2) - 2) + ((float) MyArray.get(Math.round(((float) MyArray.size()) / 2) - 1))) / 2;
 
 
             }
